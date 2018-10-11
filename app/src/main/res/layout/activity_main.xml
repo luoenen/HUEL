@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/notice"
+        android:layout_width="320dp"
+        android:layout_height="200dp"
+        android:src="@mipmap/notice"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/schoolNotice"
+        android:text="@string/schoolNotice"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:textColor="#ffffff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_margin="20dp"
+        android:textSize="20sp"
+        android:id="@+id/mainFirstName"
+        android:text="@string/mainFirstName"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/notice"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:background="#F9F9FB"
+        android:id="@+id/mainBottom"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <RadioGroup
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <RadioButton
+                android:id="@+id/index"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/index"
+                android:button="@null"
+                android:drawableTop="@mipmap/index"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:id="@+id/school"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/school"
+                android:button="@null"
+                android:drawableTop="@mipmap/school"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:id="@+id/book"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/book"
+                android:button="@null"
+                android:drawableTop="@mipmap/book"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:id="@+id/mySelf"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/mySelf"
+                android:button="@null"
+                android:drawableTop="@mipmap/myself"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/split"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#D81B60"
+        android:layout_marginBottom="2dp"
+        android:layout_above="@id/mainBottom">
+
+    </TableLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="30dp"
+        android:id="@+id/wall"
+        android:layout_above="@id/split"
+        android:layout_width="match_parent"
+        android:layout_height="140dp">
+
+        <LinearLayout
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioGroup
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:id="@+id/love"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/love"
+                    android:button="@null"
+                    android:drawableTop="@mipmap/love"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <RadioButton
+                    android:id="@+id/talk"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/talk"
+                    android:button="@null"
+                    android:drawableTop="@mipmap/talk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <RadioButton
+                    android:id="@+id/find"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/find"
+                    android:button="@null"
+                    android:drawableTop="@mipmap/find"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RadioGroup>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/main"
+        android:layout_above="@id/wall"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/mainFirstName"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/one"
+                android:layout_width="match_parent"
+                android:layout_height="110dp">
+                <RadioGroup
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RadioButton
+                        android:id="@+id/first"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/first"
+                        android:button="@null"
+                        android:drawableTop="@mipmap/first"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <RadioButton
+                        android:id="@+id/second"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/second"
+                        android:button="@null"
+                        android:drawableTop="@mipmap/second"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <RadioButton
+                        android:id="@+id/third"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/third"
+                        android:button="@null"
+                        android:drawableTop="@mipmap/third"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </RadioGroup>
+            </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/two"
+                    android:layout_width="match_parent"
+                    android:layout_below="@id/one"
+                    android:layout_height="110dp">
+                    <RadioGroup
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <RadioButton
+                            android:id="@+id/fourth"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/fourth"
+                            android:button="@null"
+                            android:drawableTop="@mipmap/fourth"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <RadioButton
+                            android:id="@+id/fifth"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/fifth"
+                            android:button="@null"
+                            android:drawableTop="@mipmap/fifth"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <RadioButton
+                            android:id="@+id/sixth"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/sixth"
+                            android:button="@null"
+                            android:drawableTop="@mipmap/sixth"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/three"
+                    android:layout_width="match_parent"
+                    android:layout_below="@id/two"
+                    android:layout_height="110dp">
+                    <RadioGroup
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <RadioButton
+                            android:id="@+id/seventh"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/seventh"
+                            android:button="@null"
+                            android:drawableTop="@mipmap/car"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <RadioButton
+                            android:id="@+id/eighth"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/eighth"
+                            android:button="@null"
+                            android:drawableTop="@mipmap/library"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <RadioButton
+                            android:id="@+id/ninth"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/ninth"
+                            android:button="@null"
+                            android:drawableTop="@mipmap/play"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RadioGroup>
+                </LinearLayout>
+
+            </RelativeLayout>
+        </ScrollView>
+
+
+    </ScrollView>
+
+    <TextView
+        android:layout_margin="20dp"
+        android:text="墙墙联手"
+        android:textSize="20sp"
+        android:id="@+id/wallText"
+        android:layout_below="@id/main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/wallImg"
+        android:src="@mipmap/mainnotice"
+        android:layout_toRightOf="@id/wallText"
+        android:layout_below="@id/main"
+        android:layout_marginTop="24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="@string/wallText"
+        android:id="@+id/wallNotice"
+        android:textColor="#D81B60"
+        android:layout_below="@id/main"
+        android:layout_toRightOf="@id/wallImg"
+        android:layout_marginTop="24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

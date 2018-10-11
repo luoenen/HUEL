@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">云上财大</string>
+    <string name="welcome_text">掌上餐厅\n云上财大</string>
+    <string name="toRegister">准备注册</string>
+    <string name="register">注册</string>
+    <string name="login">登录</string>
+    <string name="forget">忘记密码</string>
+    <string name="saveInfo">保持账户密码</string>
+    <string name="index">首页</string>
+    <string name="school">校园圈</string>
+    <string name="book">订单</string>
+    <string name="mySelf">我的</string>
+    <string name="mainFirstName">生活服务</string>
+    <string name="first">第一餐厅</string>
+    <string name="second">第二餐厅</string>
+    <string name="third">第三餐厅</string>
+    <string name="fourth">校园快递</string>
+    <string name="fifth">校园代购</string>
+    <string name="sixth">校园电视</string>
+    <string name="love">表白墙</string>
+    <string name="talk">吐槽墙</string>
+    <string name="find">失物招领</string>
+    <string name="seventh">出行安全</string>
+    <string name="eighth">图书馆座位</string>
+    <string name="ninth">组团出游</string>
+    <string name="schoolNotice">紧急通知:</string>
+    <string name="wallText">\t\t\txxxxx</string>
+</resources>
