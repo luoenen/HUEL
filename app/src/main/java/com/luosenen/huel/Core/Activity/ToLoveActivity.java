@@ -158,7 +158,7 @@ public class ToLoveActivity extends Activity {
                                 public void done(String s, BmobException e) {
                                     if (e == null) {
                                         Toast.makeText(ToLoveActivity.this, "成功表白", Toast.LENGTH_LONG).show();
-                                        startActivity(new Intent(ToLoveActivity.this, Love.class));
+                                        startActivity(new Intent(ToLoveActivity.this, LoveActivity.class));
                                     } else {
                                         Toast.makeText(ToLoveActivity.this, "未成功表白，失败原因" + e.toString(), Toast.LENGTH_LONG).show();
                                         startActivity(new Intent(ToLoveActivity.this, MainActivity.class));

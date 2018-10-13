@@ -39,10 +39,17 @@
 
         <Button
             android:id="@+id/index"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
             android:layout_marginLeft="20dp"
             android:background="@mipmap/index"/>
+        <TextView
+            android:text="@string/index"
+            android:textSize="10sp"
+            android:layout_marginLeft="30dp"
+            android:layout_below="@id/index"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
         <RelativeLayout
             android:layout_centerHorizontal="true"
@@ -50,29 +57,57 @@
             android:layout_height="60dp">
             <Button
                 android:id="@+id/school"
-                android:layout_width="40dp"
+                android:layout_width="36dp"
                 android:layout_marginRight="30dp"
                 android:layout_marginTop="4dp"
                 android:background="@mipmap/school"
-                android:layout_height="40dp" />
+                android:layout_height="36dp" />
+
+
+            <TextView
+                android:text="校园圈"
+                android:textSize="10sp"
+                android:layout_width="wrap_content"
+                android:layout_below="@id/school"
+                android:layout_marginLeft="6dp"
+                android:layout_height="wrap_content" />
 
             <Button
                 android:id="@+id/book"
-                android:layout_width="40dp"
+                android:layout_width="36dp"
                 android:layout_marginTop="4dp"
                 android:layout_marginLeft="30dp"
                 android:background="@mipmap/book"
                 android:layout_toRightOf="@id/school"
-                android:layout_height="40dp" />
+                android:layout_height="36dp" />
+            <TextView
+                android:text="订单"
+                android:textSize="10sp"
+                android:layout_width="wrap_content"
+                android:layout_below="@id/book"
+                android:layout_marginLeft="36dp"
+                android:layout_toRightOf="@id/school"
+                android:layout_height="wrap_content" />
         </RelativeLayout>
+
+
         <Button
+            android:id="@+id/myself"
             android:layout_alignParentRight="true"
             android:background="@mipmap/myself"
-            android:layout_width="40dp"
+            android:layout_width="36dp"
             android:layout_marginTop="4dp"
             android:layout_marginRight="20dp"
-            android:layout_height="40dp" />
+            android:layout_height="36dp" />
 
+        <TextView
+            android:text="@string/mySelf"
+            android:textSize="10sp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="28dp"
+            android:layout_below="@id/myself"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
     </RelativeLayout>
 
@@ -81,11 +116,12 @@
         android:layout_marginTop="10dp"
         android:layout_below="@id/mainFirstName"
         android:layout_width="match_parent"
-        android:layout_height="200dp">
+        android:layout_height="280dp">
 
         <ScrollView
-            android:layout_margin="30dp"
+            android:layout_margin="20dp"
             android:layout_width="match_parent"
+            android:padding="10dp"
             android:layout_height="wrap_content">
             <RelativeLayout
                 android:id="@+id/One"
@@ -230,9 +266,22 @@
 
 
 
+    <TextView
+        android:id="@+id/wallTxt"
+        android:text="墙墙联合"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/main"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+
     <RelativeLayout
         android:id="@+id/wallBut"
         android:layout_margin="20dp"
+        android:layout_below="@id/wallTxt"
         android:layout_above="@id/mainBottom"
         android:layout_width="match_parent"
         android:layout_height="120dp">
@@ -240,32 +289,20 @@
         <Button
             android:id="@+id/love"
             android:background="@mipmap/love"
-            android:layout_width="70dp"
-            android:layout_height="70dp" />
+            android:layout_width="60dp"
+            android:layout_height="60dp" />
 
         <Button
             android:id="@+id/find"
             android:background="@mipmap/find"
-            android:layout_width="70dp"
+            android:layout_width="60dp"
             android:layout_centerHorizontal="true"
-            android:layout_height="70dp" />
+            android:layout_height="60dp" />
         <Button
             android:id="@+id/talk"
             android:background="@mipmap/talk"
-            android:layout_width="70dp"
+            android:layout_width="60dp"
             android:layout_alignParentRight="true"
-            android:layout_height="70dp" />
+            android:layout_height="60dp" />
     </RelativeLayout>
-
-    <TextView
-
-        android:text="墙墙联合"
-        android:layout_above="@id/wallBut"
-        android:layout_marginBottom="10dp"
-        android:layout_marginLeft="20dp"
-        android:textSize="20sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-
 </RelativeLayout>

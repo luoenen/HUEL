@@ -51,11 +51,20 @@
 
         </activity>
 
-        <activity android:name=".Core.Activity.Love">
+        <activity android:name=".Core.Activity.LoveActivity">
 
         </activity>
 
         <activity android:name=".Core.Activity.ToLoveActivity">
+
+        </activity>
+        <activity android:name=".Core.Activity.EatOneActivity">
+
+        </activity>
+        <activity android:name=".Core.Activity.EatTwoActivity">
+
+        </activity>
+        <activity android:name=".Core.Activity.EatThreeActivity">
 
         </activity>
 

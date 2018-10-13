@@ -1,7 +1,9 @@
 package com.luosenen.huel.Core.Activity;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.AssetManager;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -9,6 +11,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -26,6 +29,9 @@ public class LoginActivity extends Activity implements View.OnClickListener {
     private Button btRegister,btLogin;
     private ProgressBar longinBar;
     private TextView app;
+    private CheckBox box;
+    private SharedPreferences preferences;
+    private SharedPreferences.Editor editor;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +49,12 @@ public class LoginActivity extends Activity implements View.OnClickListener {
         btLogin = findViewById(R.id.login);
         btRegister.setOnClickListener(this);
         btLogin.setOnClickListener(this);
+        box = findViewById(R.id.loginCheckBox);
+        preferences = getSharedPreferences("user",Context.MODE_PRIVATE);
+        editor = preferences.edit();
+        edName.setText(preferences.getString("name",""));
+        edPassword.setText(preferences.getString("pass",""));
+
     }
 
 
@@ -51,8 +63,8 @@ public class LoginActivity extends Activity implements View.OnClickListener {
         switch (v.getId()){
             case R.id.login:
                 longinBar.setVisibility(View.VISIBLE);
-                String name = edName.getText().toString().trim();
-                String pass = edPassword.getText().toString().trim();
+                final String name = edName.getText().toString().trim();
+                final String pass = edPassword.getText().toString().trim();
                 if (name.equals(null)||pass.equals(null)){
                     return;
                 }
@@ -63,6 +75,15 @@ public class LoginActivity extends Activity implements View.OnClickListener {
                     @Override
                     public void done(MyUser myUser, BmobException e) {
                         if (e==null){
+                            if (box.isChecked()) {
+                                editor.putString("name", name);
+                                editor.putString("pass", pass);
+                                editor.commit();
+                            }else {
+                                editor.putString("pass","");
+                                editor.clear();
+                                editor.commit();
+                            }
                             longinBar.setVisibility(View.INVISIBLE);
                             Toast.makeText(getApplicationContext(),"登录成功：",Toast.LENGTH_LONG).show();
                             startActivity(new Intent(getApplicationContext(),MainActivity.class));

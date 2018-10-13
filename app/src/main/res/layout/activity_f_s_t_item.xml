@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_margin="10dp"
+        android:id="@+id/eatIcon"
+        android:layout_width="180dp"
+        android:layout_height="120dp" />
+
+    <TextView
+        android:id="@+id/eatF"
+        android:text="楼层："
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@id/eatIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_toRightOf="@id/eatF"
+        android:layout_margin="20dp"
+        android:id="@+id/eatFloat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/eatN"
+        android:text="菜名："
+        android:layout_below="@id/eatF"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@id/eatIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_toRightOf="@id/eatN"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/eatFloat"
+        android:id="@+id/eatName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/eatP"
+        android:text="价格："
+        android:layout_below="@id/eatN"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@id/eatIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_toRightOf="@id/eatN"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/eatName"
+        android:id="@+id/eatPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

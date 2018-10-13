@@ -11,10 +11,9 @@ import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.widget.Button;
 
-import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 import com.luosenen.huel.R;
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity implements View.OnClickListener {
 
      String[]  permissions = new String[]{
             Manifest.permission.CAMERA,
@@ -26,19 +25,20 @@ public class MainActivity extends Activity {
 
     private static final int REQUEST_EXTERNAL_STORAGE = 1;
 
-    private Button btLove;
+    private Button btFirst,btSecond,btThird,btLove;
     @Override
     protected void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         requestPower();
         btLove = findViewById(R.id.love);
-        btLove.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),Love.class));
-            }
-        });
+        btFirst = findViewById(R.id.first);
+        btSecond = findViewById(R.id.second);
+        btThird = findViewById(R.id.third);
+        btFirst.setOnClickListener(this);
+        btSecond.setOnClickListener(this);
+        btThird.setOnClickListener(this);
+        btLove.setOnClickListener(this);
     }
 
     public void requestPower() {
@@ -48,6 +48,27 @@ public class MainActivity extends Activity {
                         permissions,
                         1);
             }
+        }
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.love:
+                startActivity(new Intent(getApplicationContext(),LoveActivity.class));
+                break;
+
+            case R.id.first:
+                startActivity(new Intent(getApplicationContext(),EatOneActivity.class));
+                break;
+            case R.id.second:
+                startActivity(new Intent(getApplicationContext(),EatTwoActivity.class));
+                break;
+            case R.id.third:
+                startActivity(new Intent(getApplicationContext(),EatThreeActivity.class));
+                break;
+
+
         }
     }
 }
