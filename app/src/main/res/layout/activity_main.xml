@@ -11,6 +11,7 @@
         android:src="@mipmap/notice"
         android:layout_centerHorizontal="true"/>
 
+
     <TextView
         android:id="@+id/schoolNotice"
         android:text="@string/schoolNotice"
@@ -19,6 +20,17 @@
         android:textColor="#ffffff"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/schoolNoticeText"
+        android:layout_width="wrap_content"
+        android:text="接到学校上级通知，下周不上课。"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffffff"
+        android:layout_margin="6dp"
+        android:layout_below="@id/schoolNotice"
+        android:layout_height="wrap_content" />
+
 
     <TextView
         android:layout_marginLeft="20dp"
@@ -31,7 +43,7 @@
 
     <RelativeLayout
         android:layout_margin="2dp"
-        android:background="#f9f9fb"
+        android:background="#F1F3F4"
         android:id="@+id/mainBottom"
         android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
@@ -39,14 +51,15 @@
 
         <Button
             android:id="@+id/index"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="4dp"
             android:layout_marginLeft="20dp"
             android:background="@mipmap/index"/>
         <TextView
             android:text="@string/index"
             android:textSize="10sp"
-            android:layout_marginLeft="30dp"
+            android:layout_marginLeft="27dp"
             android:layout_below="@id/index"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
@@ -57,11 +70,11 @@
             android:layout_height="60dp">
             <Button
                 android:id="@+id/school"
-                android:layout_width="36dp"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="6dp"
                 android:layout_marginRight="30dp"
-                android:layout_marginTop="4dp"
-                android:background="@mipmap/school"
-                android:layout_height="36dp" />
+                android:background="@mipmap/school" />
 
 
             <TextView
@@ -69,17 +82,16 @@
                 android:textSize="10sp"
                 android:layout_width="wrap_content"
                 android:layout_below="@id/school"
-                android:layout_marginLeft="6dp"
                 android:layout_height="wrap_content" />
 
             <Button
                 android:id="@+id/book"
-                android:layout_width="36dp"
-                android:layout_marginTop="4dp"
+                android:layout_width="32dp"
+                android:layout_marginTop="6dp"
                 android:layout_marginLeft="30dp"
                 android:background="@mipmap/book"
                 android:layout_toRightOf="@id/school"
-                android:layout_height="36dp" />
+                android:layout_height="32dp" />
             <TextView
                 android:text="订单"
                 android:textSize="10sp"
@@ -95,10 +107,10 @@
             android:id="@+id/myself"
             android:layout_alignParentRight="true"
             android:background="@mipmap/myself"
-            android:layout_width="36dp"
-            android:layout_marginTop="4dp"
+            android:layout_width="32dp"
+            android:layout_marginTop="6dp"
             android:layout_marginRight="20dp"
-            android:layout_height="36dp" />
+            android:layout_height="32dp" />
 
         <TextView
             android:text="@string/mySelf"
@@ -122,7 +134,7 @@
             android:layout_margin="20dp"
             android:layout_width="match_parent"
             android:padding="10dp"
-            android:layout_height="wrap_content">
+            android:layout_height="280dp">
             <RelativeLayout
                 android:id="@+id/One"
                 android:layout_width="match_parent"
@@ -170,6 +182,7 @@
 
                 <Button
                     android:id="@+id/fourth"
+                    android:layout_marginTop="10dp"
                     android:layout_below="@id/firstName"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
@@ -183,6 +196,7 @@
 
                 <Button
                     android:id="@+id/fifth"
+                    android:layout_marginTop="10dp"
                     android:layout_below="@id/secondName"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
@@ -199,6 +213,7 @@
                 <Button
                     android:id="@+id/sixth"
                     android:layout_width="50dp"
+                    android:layout_marginTop="10dp"
                     android:layout_height="50dp"
                     android:layout_alignParentRight="true"
                     android:layout_below="@id/secondName"
@@ -216,6 +231,7 @@
                     android:id="@+id/seventh"
                     android:layout_below="@id/fourthName"
                     android:layout_width="60dp"
+                    android:layout_marginTop="10dp"
                     android:layout_height="60dp"
                     android:background="@mipmap/car"/>
                 <TextView
@@ -229,7 +245,7 @@
                     android:id="@+id/eighth"
                     android:layout_below="@id/fifthName"
                     android:layout_width="50dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="20dp"
                     android:layout_height="50dp"
                     android:layout_centerHorizontal="true"
                     android:background="@mipmap/libra"/>
@@ -245,7 +261,7 @@
                     android:id="@+id/ninth"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:layout_marginTop="6dp"
+                    android:layout_marginTop="16dp"
                     android:layout_alignParentRight="true"
                     android:layout_below="@id/sixthName"
                     android:background="@mipmap/play"/>
@@ -276,7 +292,38 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
+<ImageView
+    android:id="@+id/wallNotice"
+    android:background="@mipmap/mainnotice"
+    android:layout_below="@id/main"
+    android:layout_toRightOf="@id/wallTxt"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="4dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
 
+    <LinearLayout
+        android:layout_below="@id/main"
+        android:layout_toRightOf="@id/wallNotice"
+        android:layout_width="250dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_height="20dp">
+
+        <TextView
+            android:id="@+id/wallText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text="河南财经政法大学挑战杯已经开始比赛了，大家赶紧报名啊"
+            android:textColor="#D81B60"
+            android:scrollHorizontally="true"/>
+
+    </LinearLayout>
 
     <RelativeLayout
         android:id="@+id/wallBut"

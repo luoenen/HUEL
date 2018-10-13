@@ -71,7 +71,7 @@ public class EatTwoAdapter extends BaseAdapter {
             LayoutInflater inflater = LayoutInflater.from(context);
             convertView = inflater.inflate(R.layout.activity_f_s_t_item, null);
             viewHolder = new ViewHolder();
-            viewHolder.iv_icon = (ImageView) convertView.findViewById(R.id.loveIcon);
+            viewHolder.iv_icon = (ImageView) convertView.findViewById(R.id.eatIcon);
             viewHolder.tv_float = (TextView) convertView.findViewById(R.id.eatFloat);
             viewHolder.tv_name = (TextView) convertView.findViewById(R.id.eatName);
             viewHolder.tv_price = (TextView) convertView.findViewById(R.id.eatPrice);
