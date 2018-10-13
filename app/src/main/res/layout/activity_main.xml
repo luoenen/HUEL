@@ -6,8 +6,8 @@
 
     <ImageView
         android:id="@+id/notice"
-        android:layout_width="320dp"
-        android:layout_height="200dp"
+        android:layout_width="280dp"
+        android:layout_height="160dp"
         android:src="@mipmap/notice"
         android:layout_centerHorizontal="true"/>
 
@@ -21,7 +21,7 @@
         android:layout_height="wrap_content" />
 
     <TextView
-        android:layout_margin="20dp"
+        android:layout_marginLeft="20dp"
         android:textSize="20sp"
         android:id="@+id/mainFirstName"
         android:text="@string/mainFirstName"
@@ -29,277 +29,243 @@
         android:layout_below="@id/notice"
         android:layout_height="wrap_content" />
 
-    <LinearLayout
-        android:background="#F9F9FB"
+    <RelativeLayout
+        android:layout_margin="2dp"
+        android:background="#f9f9fb"
         android:id="@+id/mainBottom"
         android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
-        android:layout_height="60dp">
-        <RadioGroup
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <Button
+            android:id="@+id/index"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:background="@mipmap/index"/>
+
+        <RelativeLayout
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
             android:layout_height="60dp">
-
-            <RadioButton
-                android:id="@+id/index"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="@string/index"
-                android:button="@null"
-                android:drawableTop="@mipmap/index"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-            <RadioButton
+            <Button
                 android:id="@+id/school"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="@string/school"
-                android:button="@null"
-                android:drawableTop="@mipmap/school"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-            <RadioButton
+                android:layout_width="40dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="4dp"
+                android:background="@mipmap/school"
+                android:layout_height="40dp" />
+
+            <Button
                 android:id="@+id/book"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="@string/book"
-                android:button="@null"
-                android:drawableTop="@mipmap/book"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-            <RadioButton
-                android:id="@+id/mySelf"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="@string/mySelf"
-                android:button="@null"
-                android:drawableTop="@mipmap/myself"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        </RadioGroup>
-    </LinearLayout>
-
-    <TableLayout
-        android:id="@+id/split"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#D81B60"
-        android:layout_marginBottom="2dp"
-        android:layout_above="@id/mainBottom">
-
-    </TableLayout>
-
-    <RelativeLayout
-        android:layout_marginTop="30dp"
-        android:id="@+id/wall"
-        android:layout_above="@id/split"
-        android:layout_width="match_parent"
-        android:layout_height="140dp">
-
-        <LinearLayout
-            android:layout_marginTop="30dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <RadioGroup
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <RadioButton
-                    android:id="@+id/love"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="@string/love"
-                    android:button="@null"
-                    android:drawableTop="@mipmap/love"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-                <RadioButton
-                    android:id="@+id/talk"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="@string/talk"
-                    android:button="@null"
-                    android:drawableTop="@mipmap/talk"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-                <RadioButton
-                    android:id="@+id/find"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="@string/find"
-                    android:button="@null"
-                    android:drawableTop="@mipmap/find"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-            </RadioGroup>
-        </LinearLayout>
+                android:layout_width="40dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="30dp"
+                android:background="@mipmap/book"
+                android:layout_toRightOf="@id/school"
+                android:layout_height="40dp" />
+        </RelativeLayout>
+        <Button
+            android:layout_alignParentRight="true"
+            android:background="@mipmap/myself"
+            android:layout_width="40dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="20dp"
+            android:layout_height="40dp" />
 
 
     </RelativeLayout>
 
-    <ScrollView
+    <RelativeLayout
         android:id="@+id/main"
-        android:layout_above="@id/wall"
         android:layout_marginTop="10dp"
         android:layout_below="@id/mainFirstName"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="200dp">
 
         <ScrollView
+            android:layout_margin="30dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
             <RelativeLayout
+                android:id="@+id/One"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content">
 
-            <LinearLayout
-                android:id="@+id/one"
-                android:layout_width="match_parent"
-                android:layout_height="110dp">
-                <RadioGroup
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <RadioButton
-                        android:id="@+id/first"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="@string/first"
-                        android:button="@null"
-                        android:drawableTop="@mipmap/first"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-                    <RadioButton
-                        android:id="@+id/second"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="@string/second"
-                        android:button="@null"
-                        android:drawableTop="@mipmap/second"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-                    <RadioButton
-                        android:id="@+id/third"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="@string/third"
-                        android:button="@null"
-                        android:drawableTop="@mipmap/third"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-                </RadioGroup>
-            </LinearLayout>
+                <Button
+                    android:id="@+id/first"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@mipmap/first"/>
+                <TextView
+                    android:id="@+id/firstName"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@id/first"
+                    android:layout_height="wrap_content"
+                    android:text="@string/first"/>
 
-                <LinearLayout
-                    android:id="@+id/two"
-                    android:layout_width="match_parent"
-                    android:layout_below="@id/one"
-                    android:layout_height="110dp">
-                    <RadioGroup
-                        android:orientation="horizontal"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                        <RadioButton
-                            android:id="@+id/fourth"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:text="@string/fourth"
-                            android:button="@null"
-                            android:drawableTop="@mipmap/fourth"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
-                        <RadioButton
-                            android:id="@+id/fifth"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:text="@string/fifth"
-                            android:button="@null"
-                            android:drawableTop="@mipmap/fifth"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
-                        <RadioButton
-                            android:id="@+id/sixth"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:text="@string/sixth"
-                            android:button="@null"
-                            android:drawableTop="@mipmap/sixth"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
-                    </RadioGroup>
-                </LinearLayout>
+                <Button
+                    android:id="@+id/second"
+                    android:layout_width="74dp"
+                    android:layout_height="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@mipmap/second"/>
+                <TextView
+                    android:id="@+id/secondName"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@id/second"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/second"/>
+                <Button
+                    android:id="@+id/third"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@mipmap/third"/>
 
-                <LinearLayout
-                    android:id="@+id/three"
-                    android:layout_width="match_parent"
-                    android:layout_below="@id/two"
-                    android:layout_height="110dp">
-                    <RadioGroup
-                        android:orientation="horizontal"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                        <RadioButton
-                            android:id="@+id/seventh"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:text="@string/seventh"
-                            android:button="@null"
-                            android:drawableTop="@mipmap/car"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
-                        <RadioButton
-                            android:id="@+id/eighth"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:text="@string/eighth"
-                            android:button="@null"
-                            android:drawableTop="@mipmap/library"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
-                        <RadioButton
-                            android:id="@+id/ninth"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:text="@string/ninth"
-                            android:button="@null"
-                            android:drawableTop="@mipmap/play"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
-                    </RadioGroup>
-                </LinearLayout>
+                <TextView
+                    android:id="@+id/thirdName"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@id/third"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/third"/>
 
+                <Button
+                    android:id="@+id/fourth"
+                    android:layout_below="@id/firstName"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@mipmap/express"/>
+                <TextView
+                    android:id="@+id/fourthName"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@id/fourth"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fourth"/>
+
+                <Button
+                    android:id="@+id/fifth"
+                    android:layout_below="@id/secondName"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@mipmap/market"/>
+                <TextView
+                    android:id="@+id/fifthName"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@id/fourth"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/fifth"/>
+
+                <Button
+                    android:id="@+id/sixth"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/secondName"
+                    android:background="@mipmap/sixth"/>
+
+                <TextView
+                    android:id="@+id/sixthName"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@id/sixth"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/sixth"/>
+
+                <Button
+                    android:id="@+id/seventh"
+                    android:layout_below="@id/fourthName"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@mipmap/car"/>
+                <TextView
+                    android:id="@+id/seventhName"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@id/seventh"
+                    android:layout_height="wrap_content"
+                    android:text="@string/seventh"/>
+
+                <Button
+                    android:id="@+id/eighth"
+                    android:layout_below="@id/fifthName"
+                    android:layout_width="50dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@mipmap/libra"/>
+                <TextView
+                    android:id="@+id/eighthName"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@id/eighth"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/eighth"/>
+
+                <Button
+                    android:id="@+id/ninth"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/sixthName"
+                    android:background="@mipmap/play"/>
+
+                <TextView
+                    android:id="@+id/ninthName"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@id/ninth"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/ninth"/>
             </RelativeLayout>
+
+
         </ScrollView>
 
+    </RelativeLayout>
 
-    </ScrollView>
 
-    <TextView
+
+    <RelativeLayout
+        android:id="@+id/wallBut"
         android:layout_margin="20dp"
-        android:text="墙墙联手"
+        android:layout_above="@id/mainBottom"
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+
+        <Button
+            android:id="@+id/love"
+            android:background="@mipmap/love"
+            android:layout_width="70dp"
+            android:layout_height="70dp" />
+
+        <Button
+            android:id="@+id/find"
+            android:background="@mipmap/find"
+            android:layout_width="70dp"
+            android:layout_centerHorizontal="true"
+            android:layout_height="70dp" />
+        <Button
+            android:id="@+id/talk"
+            android:background="@mipmap/talk"
+            android:layout_width="70dp"
+            android:layout_alignParentRight="true"
+            android:layout_height="70dp" />
+    </RelativeLayout>
+
+    <TextView
+
+        android:text="墙墙联合"
+        android:layout_above="@id/wallBut"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
         android:textSize="20sp"
-        android:id="@+id/wallText"
-        android:layout_below="@id/main"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <ImageView
-        android:id="@+id/wallImg"
-        android:src="@mipmap/mainnotice"
-        android:layout_toRightOf="@id/wallText"
-        android:layout_below="@id/main"
-        android:layout_marginTop="24dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-    <TextView
-        android:text="@string/wallText"
-        android:id="@+id/wallNotice"
-        android:textColor="#D81B60"
-        android:layout_below="@id/main"
-        android:layout_toRightOf="@id/wallImg"
-        android:layout_marginTop="24dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
 
 </RelativeLayout>

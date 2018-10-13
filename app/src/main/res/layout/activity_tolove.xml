@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_marginTop="30dp"
+        android:id="@+id/picture"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:visibility="visible"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:layout_margin="30dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/selectPhoto"
+        android:textSize="12sp"
+        android:layout_below="@id/picture"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:text="从相册中选择图片"/>
+    
+    <EditText
+        android:id="@+id/toLoveSchool"
+        android:hint="你的学校"
+        android:gravity="center"
+        android:lines="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/selectPhoto"/>
+    <EditText
+        android:id="@+id/toLoveName"
+        android:hint="你的名字"
+        android:lines="1"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toLoveSchool"/>
+    <EditText
+        android:id="@+id/toLoveTell"
+        android:hint="你的电话"
+        android:lines="1"
+        android:inputType="number"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toLoveName"/>
+    <EditText
+        android:id="@+id/toLoveDesc"
+        android:hint="对Ta想说的话"
+        android:lines="1"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toLoveTell"/>
+
+
+    <Button
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/toLoveDesc"
+        android:id="@+id/beginLove"
+        android:textSize="12sp"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:text="表白"/>
+</RelativeLayout>

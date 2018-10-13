@@ -84,14 +84,6 @@
         android:background="@mipmap/login"
         android:layout_margin="30dp"
         android:layout_alignParentEnd="true" />
-    <Button
-        android:id="@+id/loginForget"
-        android:layout_width="80dp"
-        android:layout_height="54dp"
-        android:background="@mipmap/forgot"
-        android:layout_marginTop="30dp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/loginCheckBox"/>
     <ProgressBar
         android:layout_below="@id/loginRegister"
         android:layout_width="wrap_content"

@@ -16,6 +16,11 @@
     <!--允许读取手机状态 用于创建BmobInstallation-->
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -46,9 +51,14 @@
 
         </activity>
 
-        <activity android:name=".Core.Activity.ForgetActivity">
+        <activity android:name=".Core.Activity.Love">
 
         </activity>
+
+        <activity android:name=".Core.Activity.ToLoveActivity">
+
+        </activity>
+
     </application>
 
 </manifest>

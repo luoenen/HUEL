@@ -23,7 +23,7 @@ import cn.bmob.v3.listener.SaveListener;
 public class LoginActivity extends Activity implements View.OnClickListener {
 
     private EditText edName,edPassword;
-    private Button btRegister,btForget,btLogin;
+    private Button btRegister,btLogin;
     private ProgressBar longinBar;
     private TextView app;
     @Override
@@ -40,10 +40,8 @@ public class LoginActivity extends Activity implements View.OnClickListener {
         edPassword = findViewById(R.id.loginPassword);
         longinBar = findViewById(R.id.loginIng);
         btRegister = findViewById(R.id.loginRegister);
-        btForget = findViewById(R.id.loginForget);
         btLogin = findViewById(R.id.login);
         btRegister.setOnClickListener(this);
-        btForget.setOnClickListener(this);
         btLogin.setOnClickListener(this);
     }
 
@@ -81,9 +79,6 @@ public class LoginActivity extends Activity implements View.OnClickListener {
                 startActivity(new Intent(getApplicationContext(),RegisterActivity.class));
                 break;
 
-            case R.id.loginForget:
-                startActivity(new Intent(getApplicationContext(),ForgetActivity.class));
-                break;
         }
     }
 }
