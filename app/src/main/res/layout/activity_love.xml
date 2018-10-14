@@ -3,16 +3,42 @@
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/toLove"
-        android:text="去表白"
-        android:layout_alignParentBottom="true"
+    <RelativeLayout
+        android:id="@+id/LoveTitle"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:background="@color/colorPrimaryDark"
+        android:layout_height="40dp">
+        <Button
+            android:layout_marginTop="8dp"
+            android:id="@+id/loveBack"
+            android:background="@mipmap/back"
+            android:layout_width="30dp"
+            android:layout_marginLeft="6dp"
+            android:layout_height="30dp" />
+        <Button
+            android:id="@+id/toLove"
+            android:layout_marginTop="8dp"
+            android:layout_alignParentRight="true"
+            android:background="@mipmap/tolove"
+            android:layout_marginRight="6dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp" />
+        <TextView
+            android:id="@+id/loveWallText"
+            android:layout_centerHorizontal="true"
+            android:text="表白墙"
+            android:layout_marginTop="8dp"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+
 
     <ListView
+        android:layout_below="@id/LoveTitle"
         android:id="@+id/loveList"
-        android:layout_above="@id/toLove"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 

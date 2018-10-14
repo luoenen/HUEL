@@ -25,7 +25,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
     private static final int REQUEST_EXTERNAL_STORAGE = 1;
 
-    private Button btFirst,btSecond,btThird,btLove;
+    private Button btFirst,btSecond,btThird,btLove,index,school,myself;
     @Override
     protected void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +35,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
         btFirst = findViewById(R.id.first);
         btSecond = findViewById(R.id.second);
         btThird = findViewById(R.id.third);
+        index = findViewById(R.id.index);
+        school = findViewById(R.id.school);
+        myself = findViewById(R.id.myself);
+        index.setOnClickListener(this);
+        school.setOnClickListener(this);
+        myself.setOnClickListener(this);
         btFirst.setOnClickListener(this);
         btSecond.setOnClickListener(this);
         btThird.setOnClickListener(this);
@@ -56,19 +62,37 @@ public class MainActivity extends Activity implements View.OnClickListener {
         switch (v.getId()){
             case R.id.love:
                 startActivity(new Intent(getApplicationContext(),LoveActivity.class));
+                overridePendingTransition(R.anim.anim_in,R.anim.anim_out);
                 break;
 
             case R.id.first:
                 startActivity(new Intent(getApplicationContext(),EatOneActivity.class));
+                overridePendingTransition(R.anim.anim_in,R.anim.anim_out);
                 break;
             case R.id.second:
                 startActivity(new Intent(getApplicationContext(),EatTwoActivity.class));
+                overridePendingTransition(R.anim.anim_in,R.anim.anim_out);
                 break;
             case R.id.third:
                 startActivity(new Intent(getApplicationContext(),EatThreeActivity.class));
+                overridePendingTransition(R.anim.anim_in,R.anim.anim_out);
                 break;
 
+            case R.id.index:
 
+                startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                overridePendingTransition(R.anim.anim_in,R.anim.anim_out);
+                break;
+
+            case R.id.school:
+                startActivity(new Intent(getApplicationContext(),SchoolActivity.class));
+                overridePendingTransition(R.anim.anim_in,R.anim.anim_out);
+                break;
+
+            case R.id.myself:
+                startActivity(new Intent(getApplicationContext(),MySelfActivity.class));
+                overridePendingTransition(R.anim.anim_in,R.anim.anim_out);
+                break;
         }
     }
 }

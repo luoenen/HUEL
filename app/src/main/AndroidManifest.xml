@@ -68,6 +68,14 @@
 
         </activity>
 
+        <activity android:name=".Core.Activity.MySelfActivity">
+
+        </activity>
+
+        <activity android:name=".Core.Activity.SchoolActivity">
+
+        </activity>
+
     </application>
 
 </manifest>

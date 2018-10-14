@@ -32,6 +32,7 @@ public class WelcomeActivity extends AppCompatActivity {
             @Override
             public void run() {
                 startActivity(new Intent(getApplicationContext(),LoginActivity.class));
+                overridePendingTransition(R.anim.anim_in,R.anim.anim_out);
                 finish();
             }
         },time);

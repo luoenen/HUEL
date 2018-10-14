@@ -20,6 +20,7 @@ import android.widget.Toast;
 import com.luosenen.huel.Core.User.MyUser;
 import com.luosenen.huel.R;
 
+import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.SaveListener;
 
@@ -38,6 +39,13 @@ public class LoginActivity extends Activity implements View.OnClickListener {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_login);
+        MyUser userInfo = BmobUser.getCurrentUser(MyUser.class);
+        if (userInfo!=null){
+            Toast.makeText(getApplicationContext(),"登录成功：",Toast.LENGTH_LONG).show();
+            startActivity(new Intent(getApplicationContext(),MainActivity.class));
+            overridePendingTransition(R.anim.anim_in,R.anim.anim_out);
+            finish();
+        }
         app = findViewById(R.id.appName);
         AssetManager assets = getAssets();
         Typeface fromAsset = Typeface.createFromAsset(assets, "font/font.ttf");
@@ -63,37 +71,46 @@ public class LoginActivity extends Activity implements View.OnClickListener {
         switch (v.getId()){
             case R.id.login:
                 longinBar.setVisibility(View.VISIBLE);
-                final String name = edName.getText().toString().trim();
-                final String pass = edPassword.getText().toString().trim();
-                if (name.equals(null)||pass.equals(null)){
-                    return;
-                }
-                MyUser user = new MyUser();
-                user.setUsername(name);
-                user.setPassword(pass);
-                user.login(new SaveListener<MyUser>() {
-                    @Override
-                    public void done(MyUser myUser, BmobException e) {
-                        if (e==null){
-                            if (box.isChecked()) {
-                                editor.putString("name", name);
-                                editor.putString("pass", pass);
-                                editor.commit();
-                            }else {
-                                editor.putString("pass","");
-                                editor.clear();
-                                editor.commit();
-                            }
-                            longinBar.setVisibility(View.INVISIBLE);
-                            Toast.makeText(getApplicationContext(),"登录成功：",Toast.LENGTH_LONG).show();
-                            startActivity(new Intent(getApplicationContext(),MainActivity.class));
-                            finish();
-                        }else {
-                            longinBar.setVisibility(View.INVISIBLE);
-                            Toast.makeText(getApplicationContext(),"登录失败："+e.toString(),Toast.LENGTH_LONG).show();
-                        }
+                MyUser userInfo = BmobUser.getCurrentUser(MyUser.class);
+                if (userInfo!=null){
+
+                    Toast.makeText(getApplicationContext(),"登录成功：",Toast.LENGTH_LONG).show();
+                    startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                    finish();
+                }else {
+                    final String name = edName.getText().toString().trim();
+                    final String pass = edPassword.getText().toString().trim();
+                    if (name.equals(null) || pass.equals(null)) {
+                        return;
                     }
-                });
+                    MyUser user = new MyUser();
+                    user.setUsername(name);
+                    user.setPassword(pass);
+                    user.login(new SaveListener<MyUser>() {
+                        @Override
+                        public void done(MyUser myUser, BmobException e) {
+                            if (e == null) {
+                                if (box.isChecked()) {
+                                    editor.putString("name", name);
+                                    editor.putString("pass", pass);
+                                    editor.commit();
+                                } else {
+                                    editor.putString("pass", "");
+                                    editor.clear();
+                                    editor.commit();
+                                }
+                                longinBar.setVisibility(View.INVISIBLE);
+                                Toast.makeText(getApplicationContext(), "登录成功：", Toast.LENGTH_LONG).show();
+                                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                                overridePendingTransition(R.anim.anim_in,R.anim.anim_out);
+                                finish();
+                            } else {
+                                longinBar.setVisibility(View.INVISIBLE);
+                                Toast.makeText(getApplicationContext(), "登录失败：" + e.toString(), Toast.LENGTH_LONG).show();
+                            }
+                        }
+                    });
+                }
                 break;
 
             case R.id.loginRegister:

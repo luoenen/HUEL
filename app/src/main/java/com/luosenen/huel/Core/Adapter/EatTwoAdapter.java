@@ -72,7 +72,7 @@ public class EatTwoAdapter extends BaseAdapter {
             convertView = inflater.inflate(R.layout.activity_f_s_t_item, null);
             viewHolder = new ViewHolder();
             viewHolder.iv_icon = (ImageView) convertView.findViewById(R.id.eatIcon);
-            viewHolder.tv_float = (TextView) convertView.findViewById(R.id.eatFloat);
+            viewHolder.tv_floot = (TextView) convertView.findViewById(R.id.eatFloot);
             viewHolder.tv_name = (TextView) convertView.findViewById(R.id.eatName);
             viewHolder.tv_price = (TextView) convertView.findViewById(R.id.eatPrice);
             convertView.setTag(viewHolder);
@@ -95,7 +95,7 @@ public class EatTwoAdapter extends BaseAdapter {
                     });
                 }
             }).start();
-            viewHolder.tv_float.setText(school);
+            viewHolder.tv_floot.setText(floot);
             viewHolder.tv_name.setText(name);
             viewHolder.tv_price.setText(desc);
 
@@ -117,7 +117,7 @@ public class EatTwoAdapter extends BaseAdapter {
         TextView tv_sex;
         TextView tv_price;
         ImageView iv_icon;
-        TextView tv_float;
+        TextView tv_floot;
     }
     public Bitmap getPicture(String path){
         Bitmap bm=null;

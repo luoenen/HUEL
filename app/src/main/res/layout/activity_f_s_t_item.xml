@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:padding="10dp"
+    android:padding="4dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
     <ImageView
-        android:layout_margin="10dp"
+        android:layout_margin="6dp"
         android:id="@+id/eatIcon"
         android:layout_width="180dp"
         android:layout_height="120dp" />
@@ -20,8 +20,9 @@
         android:layout_height="wrap_content" />
     <TextView
         android:layout_toRightOf="@id/eatF"
-        android:layout_margin="20dp"
-        android:id="@+id/eatFloat"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/eatFloot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
@@ -35,8 +36,9 @@
         android:layout_height="wrap_content" />
     <TextView
         android:layout_toRightOf="@id/eatN"
-        android:layout_marginLeft="20dp"
-        android:layout_below="@id/eatFloat"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/eatFloot"
         android:id="@+id/eatName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
@@ -50,9 +52,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
     <TextView
-        android:layout_toRightOf="@id/eatN"
+        android:layout_toRightOf="@id/eatP"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
         android:layout_below="@id/eatName"
         android:id="@+id/eatPrice"
         android:layout_width="wrap_content"
