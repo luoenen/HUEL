@@ -10,27 +10,45 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
+import com.luosenen.huel.Core.MyFiles.Life;
 import com.luosenen.huel.R;
+
+import java.util.List;
+
+import cn.bmob.v3.BmobQuery;
+import cn.bmob.v3.exception.BmobException;
+import cn.bmob.v3.listener.FindListener;
 
 public class MainActivity extends Activity implements View.OnClickListener {
 
      String[]  permissions = new String[]{
-            Manifest.permission.CAMERA,
-            Manifest.permission.WRITE_EXTERNAL_STORAGE,
-            Manifest.permission.CALL_PHONE,
-            Manifest.permission.READ_EXTERNAL_STORAGE,
-            Manifest.permission.WRITE_EXTERNAL_STORAGE,
+             Manifest.permission.CAMERA,
+             Manifest.permission.WRITE_EXTERNAL_STORAGE,
+             Manifest.permission.CALL_PHONE,
+             Manifest.permission.READ_EXTERNAL_STORAGE,
+             Manifest.permission.WRITE_EXTERNAL_STORAGE,
+             Manifest.permission.ACCESS_FINE_LOCATION,
+             Manifest.permission.ACCESS_COARSE_LOCATION,
+             Manifest.permission.READ_PHONE_STATE,
+             Manifest.permission.ACCESS_WIFI_STATE,
+             Manifest.permission.ACCESS_NETWORK_STATE,
+             Manifest.permission.WRITE_EXTERNAL_STORAGE,
+             Manifest.permission.INTERNET,
+             Manifest.permission.CHANGE_WIFI_STATE
     };
 
     private static final int REQUEST_EXTERNAL_STORAGE = 1;
-
-    private Button btFirst,btSecond,btThird,btLove,index,school,myself;
+    private static TextView life;
+    private Button btFirst,btSecond,btThird,btLove,index,school,myself,express,shop,car;
     @Override
     protected void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         requestPower();
+        setLife();
         btLove = findViewById(R.id.love);
         btFirst = findViewById(R.id.first);
         btSecond = findViewById(R.id.second);
@@ -38,6 +56,14 @@ public class MainActivity extends Activity implements View.OnClickListener {
         index = findViewById(R.id.index);
         school = findViewById(R.id.school);
         myself = findViewById(R.id.myself);
+        life = findViewById(R.id.lifeText);
+        express = findViewById(R.id.fourth);
+        shop = findViewById(R.id.fifth);
+        car = findViewById(R.id.seventh);
+        car.setOnClickListener(this);
+        shop.setOnClickListener(this);
+        express.setOnClickListener(this);
+        express.setOnClickListener(this);
         index.setOnClickListener(this);
         school.setOnClickListener(this);
         myself.setOnClickListener(this);
@@ -45,6 +71,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
         btSecond.setOnClickListener(this);
         btThird.setOnClickListener(this);
         btLove.setOnClickListener(this);
+
+
     }
 
     public void requestPower() {
@@ -55,6 +83,22 @@ public class MainActivity extends Activity implements View.OnClickListener {
                         1);
             }
         }
+    }
+
+    public void setLife(){
+        BmobQuery<Life> query = new BmobQuery<Life>();
+        query.findObjects(new FindListener<Life>() {
+            @Override
+            public void done(List<Life> list, BmobException e) {
+                if (e!=null){
+                    Toast.makeText(getApplicationContext(), list.size(), Toast.LENGTH_LONG).show();
+                    String str[] = new String[list.size()];
+                    str[0] = list.get(1).getStr().toString();
+                    Toast.makeText(getApplicationContext(), str[0], Toast.LENGTH_LONG).show();
+                    life.setText(str[0]);
+                }
+            }
+        });
     }
 
     @Override
@@ -91,6 +135,18 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
             case R.id.myself:
                 startActivity(new Intent(getApplicationContext(),MySelfActivity.class));
+                overridePendingTransition(R.anim.anim_in,R.anim.anim_out);
+                break;
+            case R.id.fourth:
+                startActivity(new Intent(getApplicationContext(),ExpressActivity.class));
+                overridePendingTransition(R.anim.anim_in,R.anim.anim_out);
+                break;
+            case R.id.fifth:
+                startActivity(new Intent(getApplicationContext(),ShopActivity.class));
+                overridePendingTransition(R.anim.anim_in,R.anim.anim_out);
+                break;
+            case R.id.seventh:
+                startActivity(new Intent(getApplicationContext(),CarActivity.class));
                 overridePendingTransition(R.anim.anim_in,R.anim.anim_out);
                 break;
         }

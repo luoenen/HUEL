@@ -95,9 +95,9 @@ public class EatTwoAdapter extends BaseAdapter {
                     });
                 }
             }).start();
-            viewHolder.tv_floot.setText(floot);
+            viewHolder.tv_floot.setText(title);
             viewHolder.tv_name.setText(name);
-            viewHolder.tv_price.setText(desc);
+            viewHolder.tv_price.setText(String.valueOf(price));
 
         }else {
             viewHolder = (ViewHolder) convertView.getTag();

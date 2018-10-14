@@ -27,13 +27,21 @@ import cn.bmob.v3.listener.FindListener;
 public class EatTwoActivity extends Activity {
 
     private ListView listView;
-
+    private Button twoB;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
         listView = findViewById(R.id.eatSList);
-
+        twoB = findViewById(R.id.secondBack);
+        twoB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                overridePendingTransition(R.anim.anim_in,R.anim.anim_out);
+                finish();
+            }
+        });
         BmobQuery<EatTwoFile> bmobQuery = new BmobQuery<EatTwoFile>();
         bmobQuery.findObjects(new FindListener<EatTwoFile>() {
             @Override

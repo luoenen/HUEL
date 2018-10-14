@@ -25,12 +25,21 @@ import cn.bmob.v3.listener.FindListener;
 public class EatOneActivity extends Activity {
 
     private ListView listView;
-
+    private Button oneB;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
         listView = findViewById(R.id.eatFList);
+        oneB = findViewById(R.id.firstBack);
+        oneB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                overridePendingTransition(R.anim.anim_in,R.anim.anim_out);
+                finish();
+            }
+        });
 
         BmobQuery<EatOneFile> bmobQuery = new BmobQuery<EatOneFile>();
         bmobQuery.findObjects(new FindListener<EatOneFile>() {
@@ -45,7 +54,7 @@ public class EatOneActivity extends Activity {
 
                     for (int i = 0; i < list.size(); i++) {
                         name[i] = list.get(i).getName();
-                        floot[i] = list.get(i).getFloot();
+                        floot[i] = list.get(i).getTitle();
                         price[i] = String.valueOf(list.get(i).getPrice());
                         list.get(i).getIcon();
                         image[i] = list.get(i).getIcon();

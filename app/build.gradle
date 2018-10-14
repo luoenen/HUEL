@@ -9,6 +9,11 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            //设置支持的SO库架构（开发者可以根据需要，选择一个或多个平台的so）
+            abiFilters "armeabi", "armeabi-v7a", "arm64-v8a", "x86","arm64-v8a","x86_64"
+        }
     }
     buildTypes {
         release {
@@ -36,4 +41,9 @@ dependencies {
 
     //底部导航栏
     implementation 'com.ashokvarma.android:bottom-navigation-bar:0.9.5'
+    //高德SDK依赖
+
+    implementation 'com.amap.api:3dmap:6.4.1'
+
+    implementation 'com.amap.api:location:4.2.0'
 }

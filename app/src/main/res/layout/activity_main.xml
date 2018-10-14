@@ -48,8 +48,8 @@
         android:layout_toRightOf="@id/wallTxt"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="4dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_width="20dp"
+        android:layout_height="20dp" />
 
     <RelativeLayout
         android:layout_margin="2dp"
@@ -290,8 +290,8 @@
     android:layout_toRightOf="@id/wallTxt"
     android:layout_marginLeft="10dp"
     android:layout_marginTop="4dp"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content" />
+    android:layout_width="20dp"
+    android:layout_height="20dp" />
 
     <LinearLayout
         android:layout_below="@id/main"
@@ -385,7 +385,6 @@
             android:focusableInTouchMode="true"
             android:marqueeRepeatLimit="marquee_forever"
             android:singleLine="true"
-            android:text="河南财经政法大学各个餐厅都降价啦，赶紧线上预定啊。"
             android:textColor="@color/colorPrimary"
             android:scrollHorizontally="true"/>
 
