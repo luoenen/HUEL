@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/universityTitle"
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimaryDark"
+        android:layout_height="40dp">
+        <Button
+            android:id="@+id/schoolBack"
+            android:background="@mipmap/back"
+            android:layout_width="30dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="6dp"
+            android:layout_height="30dp" />
+
+        <Button
+            android:id="@+id/toUniversity"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentRight="true"
+            android:background="@mipmap/tolove"
+            android:layout_marginRight="6dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp" />
+        <TextView
+            android:id="@+id/schoolText"
+            android:layout_centerHorizontal="true"
+            android:text="校园圈"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <ListView
+        android:layout_below="@id/universityTitle"
+        android:id="@+id/schoolList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ListView>
+
+</RelativeLayout>

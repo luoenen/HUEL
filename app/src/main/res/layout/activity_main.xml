@@ -117,14 +117,13 @@
         android:layout_marginTop="10dp"
         android:layout_below="@id/mainFirstName"
         android:layout_width="match_parent"
-        android:layout_height="280dp">
+        android:layout_height="300dp">
 
         <ScrollView
             android:layout_margin="20dp"
             android:scrollbars="none"
             android:layout_width="match_parent"
-            android:padding="10dp"
-            android:layout_height="280dp">
+            android:layout_height="wrap_content">
             <RelativeLayout
                 android:id="@+id/One"
                 android:layout_width="match_parent"
@@ -265,6 +264,39 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:text="@string/ninth"/>
+
+                <Button
+                    android:id="@+id/tenth"
+                    android:layout_width="50dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_below="@id/seventhName"
+                    android:background="@mipmap/old"
+                    android:layout_height="50dp" />
+
+                <TextView
+                    android:id="@+id/tenthName"
+                    android:text="跳瘙市场"
+                    android:layout_below="@id/tenth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/eleventh"
+                    android:layout_width="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp"
+                    android:layout_below="@id/eighthName"
+                    android:background="@mipmap/shop"
+                    android:layout_height="50dp" />
+
+                <TextView
+                    android:id="@+id/eleventhName"
+                    android:text="校内创业"
+                    android:layout_below="@id/eleventh"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
             </RelativeLayout>
 
 
@@ -382,6 +414,7 @@
             android:layout_height="wrap_content"
             android:ellipsize="marquee"
             android:focusable="true"
+            android:text="河南财经政法大学图书馆从xxxx到xxxx实行闭馆。"
             android:focusableInTouchMode="true"
             android:marqueeRepeatLimit="marquee_forever"
             android:singleLine="true"

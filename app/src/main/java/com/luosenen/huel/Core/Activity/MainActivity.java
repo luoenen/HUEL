@@ -42,13 +42,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
     private static final int REQUEST_EXTERNAL_STORAGE = 1;
     private static TextView life;
-    private Button btFirst,btSecond,btThird,btLove,index,school,myself,express,shop,car;
+    private Button btFirst,btSecond,btThird,btLove,index,school,myself,express,shop,car,find,lifeb,tv;
     @Override
     protected void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         requestPower();
-        setLife();
         btLove = findViewById(R.id.love);
         btFirst = findViewById(R.id.first);
         btSecond = findViewById(R.id.second);
@@ -60,6 +59,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
         express = findViewById(R.id.fourth);
         shop = findViewById(R.id.fifth);
         car = findViewById(R.id.seventh);
+        find = findViewById(R.id.find);
+        lifeb = findViewById(R.id.talk);
+        tv = findViewById(R.id.sixth);
+        tv.setOnClickListener(this);
+        lifeb.setOnClickListener(this);
+        find.setOnClickListener(this);
         car.setOnClickListener(this);
         shop.setOnClickListener(this);
         express.setOnClickListener(this);
@@ -83,22 +88,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
                         1);
             }
         }
-    }
-
-    public void setLife(){
-        BmobQuery<Life> query = new BmobQuery<Life>();
-        query.findObjects(new FindListener<Life>() {
-            @Override
-            public void done(List<Life> list, BmobException e) {
-                if (e!=null){
-                    Toast.makeText(getApplicationContext(), list.size(), Toast.LENGTH_LONG).show();
-                    String str[] = new String[list.size()];
-                    str[0] = list.get(1).getStr().toString();
-                    Toast.makeText(getApplicationContext(), str[0], Toast.LENGTH_LONG).show();
-                    life.setText(str[0]);
-                }
-            }
-        });
     }
 
     @Override
@@ -147,6 +136,20 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 break;
             case R.id.seventh:
                 startActivity(new Intent(getApplicationContext(),CarActivity.class));
+                overridePendingTransition(R.anim.anim_in,R.anim.anim_out);
+                break;
+            case R.id.find:
+                startActivity(new Intent(getApplicationContext(),FindActivity.class));
+                overridePendingTransition(R.anim.anim_in,R.anim.anim_out);
+                break;
+
+            case R.id.talk:
+                startActivity(new Intent(getApplicationContext(),LifeActivity.class));
+                overridePendingTransition(R.anim.anim_in,R.anim.anim_out);
+                break;
+
+            case R.id.sixth:
+                startActivity(new Intent(getApplicationContext(),TvActivity.class));
                 overridePendingTransition(R.anim.anim_in,R.anim.anim_out);
                 break;
         }

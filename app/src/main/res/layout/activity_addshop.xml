@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="30dp">
+
+    <EditText
+        android:layout_marginTop="30dp"
+        android:id="@+id/shopName"
+        android:text="你的名字"
+        android:gravity="center"
+        android:lines="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/shopAddress"
+        android:hint="你的位置"
+        android:lines="1"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/shopName"/>
+    <EditText
+        android:id="@+id/shopTell"
+        android:hint="你的电话"
+        android:lines="1"
+        android:inputType="number"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/shopAddress"/>
+    <EditText
+        android:id="@+id/shopPrice"
+        android:hint="快递费"
+        android:lines="1"
+        android:inputType="number"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/shopTell"/>
+
+
+
+    <Button
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/shopPrice"
+        android:id="@+id/sentShop"
+        android:textSize="12sp"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:text="发布取快递信息"/>
+
+</RelativeLayout>

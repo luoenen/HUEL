@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="30dp">
+
+    <EditText
+        android:layout_marginTop="30dp"
+        android:id="@+id/expressName"
+        android:text="你的名字"
+        android:gravity="center"
+        android:lines="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/expressAddress"
+        android:hint="你的位置"
+        android:lines="1"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/expressName"/>
+    <EditText
+        android:id="@+id/expressTell"
+        android:hint="你的电话"
+        android:lines="1"
+        android:inputType="number"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/expressAddress"/>
+    <EditText
+        android:id="@+id/expressPrice"
+        android:hint="快递费"
+        android:lines="1"
+        android:inputType="number"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/expressTell"/>
+
+
+
+    <Button
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/expressPrice"
+        android:id="@+id/sentExpress"
+        android:textSize="12sp"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:text="发布取快递信息"/>
+
+</RelativeLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_margin="6dp"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/myName"
+        android:text="我的名字："
+        android:textSize="14sp"
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/lifeName"
+        android:layout_marginTop="10dp"
+        android:textSize="15sp"
+        android:textColor="#B23AEE"
+        android:text="姓名"
+        android:layout_toRightOf="@id/myName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:id="@+id/myTell"
+        android:text="联系方式："
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/myName"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/loveIcon"
+        android:textSize="14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/lifeTell"
+        android:layout_marginTop="26dp"
+        android:textSize="13sp"
+        android:textColor="#C1C1C1"
+        android:text="电话"
+        android:layout_below="@id/lifeName"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/myTell"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/myLifeText"
+        android:text="我  想  说："
+        android:layout_below="@id/myTell"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/lifeDesc"
+        android:layout_toRightOf="@id/myLifeText"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/lifeTell"
+        android:layout_width="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content" />
+
+
+</RelativeLayout>

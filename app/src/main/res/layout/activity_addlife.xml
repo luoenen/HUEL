@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="30dp">
+
+    <EditText
+        android:layout_marginTop="30dp"
+        android:id="@+id/addLifeName"
+        android:text="你的名字"
+        android:gravity="center"
+        android:lines="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/addLifeTell"
+        android:hint="你的电话"
+        android:lines="1"
+        android:inputType="number"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/addLifeName"/>
+    <EditText
+        android:id="@+id/addLifeDesc"
+        android:hint="你想说的话"
+        android:lines="1"
+        android:inputType="number"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/addLifeTell"/>
+
+
+
+    <Button
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/addLifeDesc"
+        android:id="@+id/sentLife"
+        android:textSize="12sp"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:text="发布"/>
+
+</RelativeLayout>

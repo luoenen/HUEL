@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_marginTop="30dp"
+        android:id="@+id/UniversityPicture"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:visibility="visible"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:layout_margin="30dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/selectUniversityPhoto"
+        android:textSize="12sp"
+        android:layout_below="@id/UniversityPicture"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:text="从相册中选择图片"/>
+    
+    <EditText
+        android:id="@+id/toUniversityCollege"
+        android:hint="你的院系"
+        android:gravity="center"
+        android:lines="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/selectUniversityPhoto"/>
+    <EditText
+        android:id="@+id/toUniversityName"
+        android:hint="你的名字"
+        android:lines="1"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toUniversityCollege"/>
+    <EditText
+        android:id="@+id/toUniversityTell"
+        android:hint="你的电话"
+        android:lines="1"
+        android:inputType="number"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toUniversityName"/>
+    <EditText
+        android:id="@+id/toUniversityDesc"
+        android:hint="今天发生的事"
+        android:lines="1"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toUniversityTell"/>
+
+
+    <Button
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/toUniversityDesc"
+        android:id="@+id/beginUniversity"
+        android:textSize="12sp"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:text="发布到校园圈"/>
+</RelativeLayout>

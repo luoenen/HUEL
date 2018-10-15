@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/TvTitle"
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimaryDark"
+        android:layout_height="40dp">
+        <Button
+            android:layout_marginTop="8dp"
+            android:id="@+id/TvBack"
+            android:background="@mipmap/back"
+            android:layout_width="30dp"
+            android:layout_marginLeft="6dp"
+            android:layout_height="30dp" />
+        <TextView
+            android:id="@+id/TvText"
+            android:layout_centerHorizontal="true"
+            android:text="河南财经政法大学图网络电视"
+            android:layout_marginTop="8dp"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/TvList"
+        android:layout_below="@id/TvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ListView>
+
+
+</RelativeLayout>

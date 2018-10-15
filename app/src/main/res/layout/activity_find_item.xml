@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/FindIcon"
+        android:layout_margin="6dp"
+        android:layout_width="160dp"
+        android:layout_height="100dp" />
+    <TextView
+        android:id="@+id/myName"
+        android:text="我的名字："
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/mySchool"
+        android:layout_toRightOf="@id/FindIcon"
+        android:textSize="14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/FindName"
+        android:layout_marginTop="16dp"
+        android:textSize="15sp"
+        android:textColor="#B23AEE"
+        android:text="姓名"
+        android:layout_below="@id/loveSchool"
+        android:layout_toRightOf="@id/myName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/myTell"
+        android:text="联系方式："
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/FindName"
+        android:layout_toRightOf="@id/FindIcon"
+        android:textSize="14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/FindTell"
+        android:layout_marginTop="16dp"
+        android:textSize="13sp"
+        android:textColor="#C1C1C1"
+        android:text="电话"
+        android:layout_below="@id/FindName"
+        android:layout_toRightOf="@id/myTell"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/myDesc"
+        android:text="急切寻找丢失物品，丢失信息如下："
+        android:layout_marginTop="10dp"
+        android:textSize="14sp"
+        android:textColor="#000000"
+        android:layout_margin="6dp"
+        android:layout_marginLeft="4dp"
+        android:layout_below="@id/FindIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/FindDesc"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:textSize="14sp"
+        android:layout_below="@id/myDesc"
+        android:layout_marginBottom="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

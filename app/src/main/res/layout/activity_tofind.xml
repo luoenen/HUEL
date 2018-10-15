@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_marginTop="30dp"
+        android:id="@+id/FindPicture"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:visibility="visible"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:layout_margin="30dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/selectFindPhoto"
+        android:textSize="12sp"
+        android:layout_below="@id/FindPicture"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:text="从相册中选择图片"/>
+
+    <EditText
+        android:id="@+id/toFindName"
+        android:hint="你的名字"
+        android:lines="1"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/selectFindPhoto"/>
+    <EditText
+        android:id="@+id/toFindTell"
+        android:hint="你的电话"
+        android:lines="1"
+        android:inputType="number"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toFindName"/>
+    <EditText
+        android:id="@+id/toFindDesc"
+        android:hint="丢失物品详细描述信息"
+        android:lines="1"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toFindTell"/>
+
+
+    <Button
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/toFindDesc"
+        android:id="@+id/beginFind"
+        android:textSize="12sp"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:text="表白"/>
+</RelativeLayout>
