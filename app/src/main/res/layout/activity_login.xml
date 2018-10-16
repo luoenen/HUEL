@@ -96,4 +96,40 @@
         android:visibility="invisible"
         android:id="@+id/loginIng"/>
 
+    <TextView
+        android:id="@+id/loginThree"
+        android:text="第三方登录"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@id/loginIng"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:id="@+id/share"
+        android:layout_below="@id/loginThree"
+        android:layout_width="match_parent"
+        android:layout_margin="30dp"
+        android:layout_height="100dp">
+
+        <Button
+            android:id="@+id/loginQQ"
+            android:background="@mipmap/qq"
+            android:layout_width="40dp"
+            android:layout_height="46dp" />
+
+        <Button
+            android:id="@+id/loginWeChat"
+            android:background="@mipmap/wecaht"
+            android:layout_centerHorizontal="true"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+
+
+        <Button
+            android:id="@+id/loginWeibo"
+            android:layout_alignParentRight="true"
+            android:background="@mipmap/weibo"
+            android:layout_width="44dp"
+            android:layout_height="44dp" />
+    </RelativeLayout>
 </RelativeLayout>

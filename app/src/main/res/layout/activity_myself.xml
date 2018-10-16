@@ -103,6 +103,7 @@
         android:layout_height="100dp">
 
         <Button
+            android:id="@+id/shareQQ"
             android:background="@mipmap/qq"
             android:layout_width="46dp"
             android:layout_height="54dp" />

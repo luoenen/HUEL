@@ -114,13 +114,16 @@
 
     <RelativeLayout
         android:id="@+id/main"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:layout_below="@id/mainFirstName"
         android:layout_width="match_parent"
-        android:layout_height="300dp">
+        android:layout_height="240dp">
 
         <ScrollView
-            android:layout_margin="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
             android:scrollbars="none"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -131,13 +134,15 @@
 
                 <Button
                     android:id="@+id/first"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:layout_alignParentTop="true"
                     android:layout_marginTop="0dp"
                     android:background="@mipmap/first" />
                 <TextView
                     android:id="@+id/firstName"
+                    android:textSize="10sp"
+                    android:layout_marginTop="6dp"
                     android:layout_width="wrap_content"
                     android:layout_below="@id/first"
                     android:layout_height="wrap_content"
@@ -145,26 +150,30 @@
 
                 <Button
                     android:id="@+id/second"
-                    android:layout_width="74dp"
-                    android:layout_height="50dp"
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
                     android:layout_centerHorizontal="true"
                     android:background="@mipmap/second"/>
                 <TextView
                     android:id="@+id/secondName"
                     android:layout_width="wrap_content"
+                    android:textSize="10sp"
+                    android:layout_marginTop="6dp"
                     android:layout_below="@id/second"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:text="@string/second"/>
                 <Button
                     android:id="@+id/third"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:layout_alignParentRight="true"
                     android:background="@mipmap/third"/>
 
                 <TextView
                     android:id="@+id/thirdName"
+                    android:textSize="10sp"
+                    android:layout_marginTop="6dp"
                     android:layout_width="wrap_content"
                     android:layout_below="@id/third"
                     android:layout_height="wrap_content"
@@ -173,13 +182,15 @@
 
                 <Button
                     android:id="@+id/fourth"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="20dp"
                     android:layout_below="@id/firstName"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:background="@mipmap/express"/>
                 <TextView
                     android:id="@+id/fourthName"
+                    android:textSize="10sp"
+                    android:layout_marginTop="6dp"
                     android:layout_width="wrap_content"
                     android:layout_below="@id/fourth"
                     android:layout_height="wrap_content"
@@ -187,14 +198,16 @@
 
                 <Button
                     android:id="@+id/fifth"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="20dp"
                     android:layout_below="@id/secondName"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:layout_centerHorizontal="true"
                     android:background="@mipmap/market"/>
                 <TextView
                     android:id="@+id/fifthName"
+                    android:textSize="10sp"
+                    android:layout_marginTop="6dp"
                     android:layout_width="wrap_content"
                     android:layout_below="@id/fourth"
                     android:layout_height="wrap_content"
@@ -203,9 +216,9 @@
 
                 <Button
                     android:id="@+id/sixth"
-                    android:layout_width="50dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_height="50dp"
+                    android:layout_width="40dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_height="40dp"
                     android:layout_alignParentRight="true"
                     android:layout_below="@id/secondName"
                     android:background="@mipmap/sixth"/>
@@ -213,6 +226,8 @@
                 <TextView
                     android:id="@+id/sixthName"
                     android:layout_width="wrap_content"
+                    android:textSize="10sp"
+                    android:layout_marginTop="6dp"
                     android:layout_below="@id/sixth"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
@@ -221,13 +236,15 @@
                 <Button
                     android:id="@+id/seventh"
                     android:layout_below="@id/fourthName"
-                    android:layout_width="60dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_height="60dp"
+                    android:layout_width="42dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_height="40dp"
                     android:background="@mipmap/car"/>
                 <TextView
                     android:id="@+id/seventhName"
                     android:layout_width="wrap_content"
+                    android:textSize="10sp"
+                    android:layout_marginTop="6dp"
                     android:layout_below="@id/seventh"
                     android:layout_height="wrap_content"
                     android:text="@string/seventh"/>
@@ -235,23 +252,25 @@
                 <Button
                     android:id="@+id/eighth"
                     android:layout_below="@id/fifthName"
-                    android:layout_width="50dp"
+                    android:layout_width="40dp"
                     android:layout_marginTop="20dp"
-                    android:layout_height="50dp"
+                    android:layout_height="40dp"
                     android:layout_centerHorizontal="true"
                     android:background="@mipmap/libra"/>
                 <TextView
                     android:id="@+id/eighthName"
                     android:layout_width="wrap_content"
                     android:layout_below="@id/eighth"
+                    android:textSize="10sp"
+                    android:layout_marginTop="6dp"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:text="@string/eighth"/>
 
                 <Button
                     android:id="@+id/ninth"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:layout_marginTop="16dp"
                     android:layout_alignParentRight="true"
                     android:layout_below="@id/sixthName"
@@ -261,39 +280,64 @@
                     android:id="@+id/ninthName"
                     android:layout_width="wrap_content"
                     android:layout_below="@id/ninth"
+                    android:textSize="10sp"
+                    android:layout_marginTop="6dp"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:text="@string/ninth"/>
 
                 <Button
                     android:id="@+id/tenth"
-                    android:layout_width="50dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_width="40dp"
+                    android:layout_marginTop="20dp"
                     android:layout_below="@id/seventhName"
                     android:background="@mipmap/old"
-                    android:layout_height="50dp" />
+                    android:layout_height="40dp" />
 
                 <TextView
                     android:id="@+id/tenthName"
                     android:text="跳瘙市场"
                     android:layout_below="@id/tenth"
+                    android:textSize="10sp"
+                    android:layout_marginTop="6dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 
                 <Button
                     android:id="@+id/eleventh"
-                    android:layout_width="50dp"
+                    android:layout_width="40dp"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="20dp"
                     android:layout_below="@id/eighthName"
                     android:background="@mipmap/shop"
-                    android:layout_height="50dp" />
+                    android:layout_height="40dp" />
 
                 <TextView
                     android:id="@+id/eleventhName"
                     android:text="校内创业"
+                    android:textSize="10sp"
+                    android:layout_marginTop="6dp"
                     android:layout_below="@id/eleventh"
                     android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/twelfth"
+                    android:layout_width="40dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/ninthName"
+                    android:background="@mipmap/tewlfth"
+                    android:layout_height="40dp" />
+
+                <TextView
+                    android:id="@+id/twelfthName"
+                    android:text="云上后勤"
+                    android:textSize="10sp"
+                    android:layout_marginTop="6dp"
+                    android:layout_below="@id/eleventh"
+                    android:layout_alignParentRight="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 
@@ -304,8 +348,20 @@
 
     </RelativeLayout>
 
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_above="@id/main"
+        android:layout_below="@id/mainFirstName"
+        android:background="#F1F3F4"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:layout_height="1dp">
+
+    </TableLayout>
+
 
     <TextView
+        android:layout_marginTop="10dp"
         android:id="@+id/wallTxt"
         android:text="墙墙联合"
         android:layout_marginBottom="10dp"
@@ -321,7 +377,7 @@
     android:layout_below="@id/main"
     android:layout_toRightOf="@id/wallTxt"
     android:layout_marginLeft="10dp"
-    android:layout_marginTop="4dp"
+    android:layout_marginTop="14dp"
     android:layout_width="20dp"
     android:layout_height="20dp" />
 
@@ -330,7 +386,7 @@
         android:layout_toRightOf="@id/wallNotice"
         android:layout_width="250dp"
         android:layout_marginLeft="4dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="14dp"
         android:layout_height="20dp">
 
         <TextView
@@ -350,21 +406,22 @@
 
     <RelativeLayout
         android:id="@+id/wallBut"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:layout_below="@id/wallTxt"
         android:layout_above="@id/mainBottom"
         android:layout_width="match_parent"
-        android:layout_height="120dp">
+        android:layout_height="wrap_content">
 
         <Button
             android:id="@+id/love"
             android:background="@mipmap/love"
-            android:layout_width="60dp"
-            android:layout_height="60dp" />
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
         <TextView
             android:text="表白墙"
             android:layout_below="@id/love"
+            android:textSize="10sp"
             android:layout_marginTop="4dp"
             android:layout_marginLeft="10dp"
             android:layout_width="wrap_content"
@@ -373,25 +430,27 @@
         <Button
             android:id="@+id/find"
             android:background="@mipmap/find"
-            android:layout_width="60dp"
+            android:layout_width="50dp"
             android:layout_centerHorizontal="true"
-            android:layout_height="60dp" />
+            android:layout_height="50dp" />
         <TextView
             android:text="失物招领"
             android:layout_below="@id/find"
             android:layout_marginTop="4dp"
+            android:textSize="10sp"
             android:layout_centerHorizontal="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <Button
             android:id="@+id/talk"
             android:background="@mipmap/talk"
-            android:layout_width="60dp"
+            android:layout_width="50dp"
             android:layout_alignParentRight="true"
-            android:layout_height="60dp" />
+            android:layout_height="50dp" />
         <TextView
             android:text="生活墙"
             android:layout_below="@id/talk"
+            android:textSize="10sp"
             android:layout_marginTop="4dp"
             android:layout_alignParentRight="true"
             android:layout_marginRight="10dp"
