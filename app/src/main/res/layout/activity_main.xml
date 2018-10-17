@@ -65,9 +65,9 @@
             android:layout_height="32dp"
             android:layout_marginTop="4dp"
             android:layout_marginLeft="20dp"
-            android:background="@mipmap/index"/>
+            android:background="@mipmap/book"/>
         <TextView
-            android:text="@string/index"
+            android:text="@string/book"
             android:textSize="10sp"
             android:layout_marginLeft="27dp"
             android:layout_below="@id/index"

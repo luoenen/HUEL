@@ -113,7 +113,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
             case R.id.index:
 
-                startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                startActivity(new Intent(getApplicationContext(),BookActivity.class));
                 overridePendingTransition(R.anim.anim_in,R.anim.anim_out);
                 break;
 

@@ -1,9 +1,11 @@
 package com.luosenen.huel.Core.MyFiles;
 
+import java.io.Serializable;
+
 import cn.bmob.v3.BmobObject;
 import cn.bmob.v3.datatype.BmobFile;
 
-public class FindFile extends BmobObject {
+public class FindFile extends BmobObject implements Serializable {
 
     public String School;
     public String College;

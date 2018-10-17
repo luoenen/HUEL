@@ -12,21 +12,37 @@
         android:visibility="visible"
         android:layout_gravity="center"/>
 
+
+
     <Button
         android:layout_margin="30dp"
         android:layout_centerHorizontal="true"
         android:id="@+id/selectUniversityPhoto"
         android:textSize="12sp"
         android:layout_below="@id/UniversityPicture"
-        android:layout_width="130dp"
+        android:layout_width="50dp"
         android:layout_height="50dp"
-        android:text="从相册中选择图片"/>
+        android:background="@mipmap/addimg"/>
+
+    <TextView
+        android:layout_centerHorizontal="true"
+        android:text="选择一张图片共享于校园圈"
+        android:layout_below="@id/selectUniversityPhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
     
     <EditText
         android:id="@+id/toUniversityCollege"
         android:hint="你的院系"
         android:gravity="center"
         android:lines="1"
+        android:layout_marginTop="30dp"
+        android:singleLine="true"
+        android:layout_marginLeft="20dp"
+        android:textColor="#1996F9"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/shape_wihte_frame"
+        android:textSize="14sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/selectUniversityPhoto"/>
@@ -36,6 +52,13 @@
         android:lines="1"
         android:gravity="center"
         android:layout_width="match_parent"
+        android:singleLine="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/shape_wihte_frame"
+        android:textSize="14sp"
+        android:layout_marginTop="10dp"
+        android:textColor="#1996F9"
         android:layout_height="wrap_content"
         android:layout_below="@id/toUniversityCollege"/>
     <EditText
@@ -43,6 +66,13 @@
         android:hint="你的电话"
         android:lines="1"
         android:inputType="number"
+        android:singleLine="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/shape_wihte_frame"
+        android:textSize="14sp"
+        android:layout_marginTop="10dp"
+        android:textColor="#1996F9"
         android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -50,6 +80,13 @@
     <EditText
         android:id="@+id/toUniversityDesc"
         android:hint="今天发生的事"
+        android:singleLine="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/shape_wihte_frame"
+        android:textSize="14sp"
+        android:layout_marginTop="10dp"
+        android:textColor="#1996F9"
         android:lines="1"
         android:gravity="center"
         android:layout_width="match_parent"
@@ -58,12 +95,12 @@
 
 
     <Button
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="50dp"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/toUniversityDesc"
         android:id="@+id/beginUniversity"
         android:textSize="12sp"
-        android:layout_width="130dp"
+        android:layout_width="50dp"
         android:layout_height="50dp"
-        android:text="发布到校园圈"/>
+        android:background="@mipmap/publish"/>
 </RelativeLayout>

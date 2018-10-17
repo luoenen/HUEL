@@ -45,44 +45,44 @@
             android:layout_height="wrap_content">
 
             <EditText
-                android:text="我的学校"
+                android:hint="我的学校"
                 android:layout_marginTop="30dp"
                 android:id="@+id/myselfSchool"
                 android:layout_below="@id/myInfo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <EditText
-                android:text="我的学院"
+                android:hint="我的学院"
                 android:id="@+id/myselfCollege"
                 android:layout_below="@id/myselfSchool"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <EditText
-                android:text="我的宿舍"
+                android:hint="我的宿舍"
                 android:id="@+id/myselfAddress"
                 android:layout_below="@id/myselfCollege"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <EditText
-                android:text="我的性别"
+                android:hint="我的性别"
                 android:id="@+id/myselfSex"
                 android:layout_below="@id/myselfAddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <EditText
-                android:text="我的名字"
+                android:hint="我的名字"
                 android:id="@+id/myselfName"
                 android:layout_below="@id/myselfSex"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <EditText
-                android:text="我的学号"
+                android:hint="我的学号"
                 android:id="@+id/myselfAccount"
                 android:layout_below="@id/myselfName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <EditText
-                android:text="我的电话"
+                android:hint="我的电话"
                 android:id="@+id/myselfTell"
                 android:layout_below="@id/myselfAccount"
                 android:layout_width="match_parent"
